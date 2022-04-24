@@ -26,15 +26,15 @@ const AddExpense = (props) => {
     }
 
     return (
-        <div>
-            <div>Header of History</div>
-            <div>
+        <div >
+            <div className="header">Header of History</div>
+            <div className='ModelBody'>
                 <label>Amount</label>
                 <input type="number" name='spentMoney' onChange={($event)=>valueSeter($event)} value={spentMoney}></input>
                 <label>Details</label>
                 <input type="text" name="details" onChange={($event)=>valueSeter($event)} value={details}></input>
-                <button onClick={onSubmit}>Submit</button>
             </div>
+            <div className='modal-footer'><button onClick={onSubmit}>Submit</button> <button className='float-right' onClick={props.controlModal}>Cancel</button></div>
         </div>
     );
 }

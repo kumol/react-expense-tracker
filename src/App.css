@@ -61,3 +61,75 @@
   flex-wrap: wrap;
   box-sizing: border-box;
 }
+
+
+
+/* From uiverse.io by @adamgiebl */
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+ }
+ 
+ .cssbuttons-io-button svg {
+  margin-right: 6px;
+ }
+ 
+ .cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+ }
+ 
+ .cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+ }
+
+
+ /*submit button */
+ button {
+  color: #090909;
+  padding: 0.3em .7em;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all .3s;
+  box-shadow: 6px 6px 12px #c5c5c5,
+              -6px -6px 12px #ffffff;
+ }
+ 
+ button:hover {
+  border: 1px solid white;
+ }
+ 
+ button:active {
+  box-shadow: 4px 4px 12px #c5c5c5,
+              -4px -4px 12px #ffffff;
+ }
+
+ .ModelBody{
+  padding: 0px 20px 20px;
+ }
+
+ .header{
+  border-bottom: 1px solid #d3cdcd;
+  padding: 10px 20px 10px
+ }
+
+ .modal-footer{
+  padding: 0px 20px 20px;
+ }
+
+ .float-right{
+   float: right;
+ }
