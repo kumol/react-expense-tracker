@@ -28,6 +28,13 @@
   color: #61dafb;
 }
 
+.content-body {
+  background-color: "#F1EDED";
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid "#eeee";
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +42,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+.list{
+  width: 100%;
+  border: 1px solid #efd9d9;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px grey;
+  padding: 10px 20px;
+}
+
+.main_list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
