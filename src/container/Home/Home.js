@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import axios from 'axios';
+import moment from 'moment';
 import Model from '../../Layout/Model/Model';
 import AddExpense from '../AddExpnese/AddExpense';
 
@@ -40,7 +41,8 @@ const Home = (props) => {
                     {
                         expenses && expenses.length>0 ? expenses.map(ex=>{
                             return (<li className='main_list'><div className='list'>
-                                    <div style={{width: "10%", border: "1px solid"}}>{ex.spentMoney}</div> <span>{ex.details}</span>
+                                    <div className='amount'>{ex.spentMoney}</div>
+                                    <div className='details'>{ex.details} <span style={{float: "right"}}>{moment(ex.date).format("LL")}</span></div>
                                 </div></li>)
                         }) : <p>No content found</p>
                     }

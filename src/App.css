@@ -48,6 +48,7 @@
   border: 1px solid #efd9d9;
   margin-bottom: 10px;
   border-radius: 5px;
+  display: flex;
   box-shadow: 1px 1px 2px grey;
   padding: 10px 20px;
 }
@@ -146,4 +147,17 @@
 
  .float-right{
    float: right;
+ }
+
+ .amount{
+  width: fit-content;
+  background: #ff9900;
+  border: 1px solid purple;
+  padding: 5px;
+  border-radius: 5px;
+ }
+
+ .details{
+   width: 100%;
+   padding-left: 20px;
  }
