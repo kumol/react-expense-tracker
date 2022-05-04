@@ -96,7 +96,7 @@
 
  /*submit button */
  button {
-  color: #090909;
+  color: #292828;
   padding: 0.3em .7em;
   cursor: pointer;
   font-size: 18px;
@@ -108,8 +108,22 @@
               -6px -6px 12px #ffffff;
  }
  
- button:hover {
+ /* button:hover {
   border: 1px solid white;
+ } */
+
+ .onsubmit:hover{
+    background: #54cedf;
+    border: 1px solid #54cedf;
+    color: #313131;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+ }
+.onCancel{
+  float: right;
+}
+ .onCancel:hover{
+   background: rgb(238, 168, 122);
  }
  
  button:active {
@@ -118,7 +132,7 @@
  }
 
  .ModelBody{
-  padding: 0px 20px 20px;
+  padding: 10px 20px 20px 20px;
  }
 
  .header{

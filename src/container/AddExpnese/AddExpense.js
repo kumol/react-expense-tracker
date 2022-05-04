@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React,{useEffect,useState} from 'react';
+import classes from "./AddExpense.module.css";
 
 const baseUrl = "https://theexpense.herokuapp.com/";
 const AddExpense = (props) => {
@@ -29,12 +30,16 @@ const AddExpense = (props) => {
         <div >
             <div className="header">Header of History</div>
             <div className='ModelBody'>
-                <label>Amount</label>
-                <input type="number" name='spentMoney' onChange={($event)=>valueSeter($event)} value={spentMoney}></input>
-                <label>Details</label>
-                <input type="text" name="details" onChange={($event)=>valueSeter($event)} value={details}></input>
+                <div className={classes.amount}>
+                    <label>Amount</label>
+                    <input className={classes.input} type="number" name='spentMoney' onChange={($event)=>valueSeter($event)} value={spentMoney}></input>
+                </div>
+                <div>
+                    <label className={classes.details}>Details</label>
+                    <input className={classes.input} type="text" name="details" onChange={($event)=>valueSeter($event)} value={details}></input>
+                </div>
             </div>
-            <div className='modal-footer'><button onClick={onSubmit}>Submit</button> <button className='float-right' onClick={props.controlModal}>Cancel</button></div>
+            <div className='modal-footer'><button className='onsubmit' onClick={onSubmit}>Submit</button> <button className="onCancel" onClick={props.controlModal}>Cancel</button></div>
         </div>
     );
 }
