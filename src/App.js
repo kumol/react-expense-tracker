@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  Link,
+  NavLink
 } from "react-router-dom";
 import Home from './container/Home/Home';
 import History from './container/History/History';
@@ -11,15 +12,15 @@ function App() {
   return (
     <Router>
       <nav>
-        <ul>
-          <li>
-            <Link to="/home" >Home</Link>
+        <ul className='nav-ul'>
+          <li className='navblock'>
+            <NavLink className="nav-li" to="/home" >Home</NavLink>
           </li>
-          <li>
-            <Link to="/about" >About</Link>
+          <li className='navblock'>
+            <NavLink className="nav-li" to="/about" >About</NavLink>
           </li>
-          <li>
-            <Link to="/history" >History</Link>
+          <li className='navblock'>
+            <NavLink className="nav-li" to="/history" >History</NavLink>
           </li>
         </ul>
       </nav>
