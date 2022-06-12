@@ -27,11 +27,12 @@ const History = (props) => {
         <div className='content-body'>
             <div>Header of History</div>
             <div>
-                <ul style={{listStyle: "none", padding:"0"}}>
-                    <li>
+                <ul style={{listStyle: "none", padding: "0"}}>
+                    <li className='main_list'>
                         <div className='list'>
-                            <div className='amount'>Average: {avg.toFixed(2)}</div>
-                            <div className='details'> per day of {history.length} <span style={{float: "right"}}> Total : {total}</span></div>
+                            <div style={{paddingTop: "5px"}}>Average: </div>
+                            <div className='amount'>{avg.toFixed(2)}</div>
+                            <div className='details'> <span style={{float: "right"}}> {history.length} Days Total : <span className='amount'>{total}</span></span></div>
                         </div>
                     </li>
                     {
