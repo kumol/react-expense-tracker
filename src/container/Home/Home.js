@@ -37,7 +37,7 @@ const Home = (props) => {
                         <AddExpense controlModal={controlModal}/>
                     </Model>
                 ) : null}
-                <ul style={{listStyle: "none"}}>
+                <ul style={{listStyle: "none", padding: "0"}}>
                     {
                         expenses && expenses.length>0 ? expenses.map(ex=>{
                             return (<li className='main_list'><div className='list'>

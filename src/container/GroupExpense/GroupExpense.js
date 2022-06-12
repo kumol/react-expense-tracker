@@ -11,11 +11,14 @@ const GroupExpense = (props) => {
     const [total, setTotal] = useState(0);
     const [spentMoney, setSpentMoney] = useState(0);
     const [details, setDetails] = useState("");
+    const [type, setType] = useState("Meal");
     const valueSeter = (event)=>{
         if(event.target.name == "details"){
             setDetails(event.target.value);
-        } else{
+        } else if(event.target.name == "spentMoney"){
             setSpentMoney(event.target.value);
+        } else{
+            setType(event.target.value);
         }
     }
 
@@ -33,7 +36,6 @@ const GroupExpense = (props) => {
         let response = await axios.get(`${baseUrl}group-expense`);
         setExpenses(response.data.body);
         setTotal(response.data.total);
-        console.log(response.data.body);
     }
     useEffect(() => {
         // Update the document title using the browser API
@@ -43,19 +45,26 @@ const GroupExpense = (props) => {
         <div className='content-body'>
             <div>
                 <div className={classes.amount}>
-                    <label>Amount</label>
+                    <label className={classes.details}>Amount: </label>
                     <input className={classes.input} type="number" name='spentMoney' onChange={($event)=>valueSeter($event)} value={spentMoney}></input>
                 </div>
-                <div>
-                    <label className={classes.details}>Details</label>
+                <div className={classes.amount}>
+                    <label className={classes.details}>Details: </label>
                     <input className={classes.input} type="text" name="details" onChange={($event)=>valueSeter($event)} value={details}></input>
+                </div>
+                <div className={classes.amount}>
+                    <label for="type" className={classes.details}>Type: </label>
+                    <select name = "type" className={classes.input} onChange={($event)=>valueSeter($event)}>
+                        <option style={{ width: "40%"}} className={classes.input} name = "type" value="Meal">Meal</option>
+                        <option style={{ width: "40%" }} className={classes.input} name = "type" value="Utility">Utility</option>
+                    </select>
                 </div>
             </div>
             <button className='onsubmit' onClick={onSubmit}>Submit</button> 
-            <ul style={{listStyle: "none"}}>
+            <ul style={{listStyle: "none", padding:"0"}}>
                 {
                     expenses && expenses.length>0 ? expenses.map(ex=>{
-                        return (<li className='main_list'><div className='list'>
+                        return (<li key={ex._id} className='main_list'><div className='list'>
                                 <div className='amount'>{ex.spentMoney}</div>
                                 <div className='details'>{ex.details} <span style={{float: "right"}}>{moment(ex.date).format("LL")}</span></div>
                             </div></li>)

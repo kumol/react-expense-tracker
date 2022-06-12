@@ -27,7 +27,7 @@ const History = (props) => {
         <div className='content-body'>
             <div>Header of History</div>
             <div>
-                <ul style={{listStyle: "none"}}>
+                <ul style={{listStyle: "none", padding:"0"}}>
                     <li>
                         <div className='list'>
                             <div className='amount'>Average: {avg.toFixed(2)}</div>
